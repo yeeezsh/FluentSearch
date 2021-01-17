@@ -1,9 +1,9 @@
 [masters]
-master ansible_host=10.35.29.61 ansible_user=user021
+master ansible_host=23.101.24.128 ansible_user=yee ansible_ssh_pass=yee ansible_sudo_pass=Fluent$earch2021
 
 [workers]
-worker1 ansible_host=10.35.29.62 ansible_user=user021
-worker2 ansible_host=10.35.29.63 ansible_user=user021
+worker1 ansible_host=13.67.107.27 ansible_user=yee ansible_ssh_pass=yee ansible_sudo_pass=Fluent$earch2021
+worker2 ansible_host=52.187.71.132 ansible_user=yee ansible_ssh_pass=yee ansible_sudo_pass=Fluent$earch2021
 
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
