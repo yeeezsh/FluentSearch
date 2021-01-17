@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.dev.yml
+    kompose.version: 1.22.0 (HEAD)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: fluentsearch-bff-shard
+  name: fluentsearch-bff-shard
+spec:
+  containers:
+    - env:
+        - name: MONGODB_ADVERTISED_HOSTNAME
+          value: fluentsearch-bff-shard
+        - name: MONGODB_MONGOS_HOST
+          value: fluentsearch-bff-mongos
+        - name: MONGODB_REPLICA_SET_KEY
+          value: fluentsearchbff
+        - name: MONGODB_REPLICA_SET_MODE
+          value: primary
+        - name: MONGODB_REPLICA_SET_NAME
+          value: fluentsearch-shard0
+        - name: MONGODB_ROOT_PASSWORD
+          value: FluentSearch@BFF.MongoDB
+        - name: MONGODB_SHARDING_MODE
+          value: shardsvr
+        - name: TZ
+          value: Asia/Bangkok
+      image: bitnami/mongodb-sharded:4.4
+      name: fluentsearch-bff-shard
+      resources: {}
+      volumeMounts:
+        - mountPath: /bitnami
+          name: fluentsearch-bff-shard-claim0
+  restartPolicy: OnFailure
+  volumes:
+    - name: fluentsearch-bff-shard-claim0
+      persistentVolumeClaim:
+        claimName: fluentsearch-bff-shard-claim0
+status: {}
