@@ -4,6 +4,7 @@ metadata:
   name: admin-user
   namespace: kubernetes-dashboard
 ---
+apiVersion: v1
 kind: ClusterRoleBinding
 metadata:
   name: admin-user
