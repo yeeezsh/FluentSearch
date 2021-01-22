@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: fluentsearch-fe
-          image: yee2542/fluentsearch-fe
+          image: yee2542/fluentsearch-fe:latest
           ports:
             - containerPort: 80
