@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: fluentsearch-bff
-          image: yee2542/fluentsearch-bff
+          image: yee2542/fluentsearch-bff:latest
           ports:
             - containerPort: 5000
           envFrom:
