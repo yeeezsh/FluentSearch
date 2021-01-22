@@ -4,10 +4,10 @@ metadata:
   name: fluentsearch-bff-config
 data:
   NODE_ENV: "development"
-  TZ: Asia/Bangkok
-  ORIGIN: http(|s):\/\/10.35.29.62:5000
+  TZ: "Asia/Bangkok"
+  ORIGIN: "http(|s)://10.35.29.62:5000"
   DATABASE_CONNECTION: "mongodb://fluentsearch-mongos/fluentsearch-bff"
-  DATABASE_USERAME: root
-  DATABASE_PASSWORD: FluentSearch@BFF.MongoDB
-  DATABASE_AUTH_SOURCE: admin
-  PORT: 5000
+  DATABASE_USERAME: "root"
+  DATABASE_PASSWORD: "FluentSearch@BFF.MongoDB"
+  DATABASE_AUTH_SOURCE: "admin"
+  PORT: "5000"
