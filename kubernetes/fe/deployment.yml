@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fluentsearch-fe
+  labels:
+    app: fluentsearch-fe
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fluentsearch-fe
+  template:
+    metadata:
+      labels:
+        app: fluentsearch-fe
+    spec:
+      containers:
+        - name: fluentsearch-fe
+          image: yee2542/fluentsearch-fe
+          ports:
+            - containerPort: 80
