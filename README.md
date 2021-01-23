@@ -12,7 +12,7 @@ install via `helm`
 ```sh
 $ helm repo add bitnami https://charts.bitnami.com/bitnami
 
-$ helm install -f ./mongodb/values.yaml fluentsearch-mongodb bitnami/mongodb-sharded
+$ helm install -f ./mongodb/values.yaml fluentsearch-mongodb bitnami/mongodb-sharded -n fluentsearch
 ```
 
 ## Local Development
