@@ -1,4 +1,4 @@
-# Deployment
+# Deployments
 - fluentsearch-fe `(port: 80)`
 - fluentsearch-bff `(port: 3000)`
 # Services
