@@ -19,3 +19,4 @@ spec:
           image: yee2542/fluentsearch-fe:latest
           ports:
             - containerPort: 80
+              name: http
