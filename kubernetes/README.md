@@ -1,3 +1,10 @@
+# Deployment
+- fluentsearch-fe `(port: 80)`
+- fluentsearch-bff `(port: 3000)`
+# Services
+- fluentsearch-fe-service `(port: 80, nodePort: 30007)`
+- fluentsearch-bff-service `(port: 3000, nodePort: 30009)`
+
 # Local Development
 
 connect to service via minikube tunnel
