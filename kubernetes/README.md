@@ -13,10 +13,10 @@ install via `helm`
 $ helm repo add bitnami https://charts.bitnami.com/bitnami
 
 # local
-$ helm install -f ./mongodb/values.local.yaml fluentsearch-mongodb bitnami/mongodb-sharded -n fluentsearch
+$ helm install -f ./mongodb/values.local.yml fluentsearch-mongodb bitnami/mongodb-sharded -n fluentsearch
 
 # production
-$ helm install -f ./mongodb/values.yaml fluentsearch-mongodb bitnami/mongodb-sharded -n fluentsearch
+$ helm install -f ./mongodb/values.yml fluentsearch-mongodb bitnami/mongodb-sharded -n fluentsearch
 ```
 
 connect via port-forward
