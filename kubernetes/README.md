@@ -22,3 +22,11 @@ kubectl port-forward ${type/service} ${port} --addreess 0.0.0.0
 
 kubectl port-forward svc/fluentsearch-fe-service 80 --address 0.0.0.0
 ```
+
+# Linkerd Injection
+
+inject linkerd to all services
+
+```sh
+kubectl get deploy -o yaml | linkerd inject - | kubectl apply -f -
+```
