@@ -5,6 +5,8 @@ metadata:
   labels:
     app: fluentsearch-bff
   namespace: fluentsearch
+  annotations:
+    linkerd.io/inject: enabled
 spec:
   replicas: 2
   selector:
