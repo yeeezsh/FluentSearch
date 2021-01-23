@@ -72,7 +72,7 @@ usePasswordFile: false
 ## Number of MongoDB Shards
 ## ref: https://docs.mongodb.com/manual/core/sharded-cluster-shards/
 ##
-shards: 3
+shards: 1
 
 ## Shard replica set properties
 ## ref: https://docs.mongodb.com/manual/replication/index.html
@@ -83,7 +83,7 @@ shardsvr:
   dataNode:
     ## Number of replicas. A value of replicas=1 is simply a primary node
     ##
-    replicas: 2
+    replicas: 1
     ## Configure resource requests and limits
     ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
     ##
@@ -243,7 +243,7 @@ shardsvr:
   arbiter:
     ## Number of arbiter nodes
     ##
-    replicas: 1
+    replicas: 0
     ## Configure resource requests and limits
     ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
     ##
@@ -420,7 +420,7 @@ shardsvr:
 configsvr:
   ## Number of replicas. A value of replicas=1 is simply a primary node
   ##
-  replicas: 2
+  replicas: 1
   ## Configure resource requests and limits
   ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
   ##
@@ -623,7 +623,7 @@ configsvr:
 mongos:
   ## Number of replicas
   ##
-  replicas: 2
+  replicas: 1
   ## Configure resource requests and limits
   ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
   ##
