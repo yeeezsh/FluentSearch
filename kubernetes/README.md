@@ -25,7 +25,11 @@ connect via port-forward
 $ kubectl port-forward -n fluentsearch svc/fluentsearch-mongodb 27017:27017 &
     mongo --host 127.0.0.1 --authenticationDatabase admin -p ${MONGODB_ROOT_PASSWORD}
 
+# port forward
 $ kubectl port-forward -n fluentsearch svc/fluentsearch-mongodb 27017:27017
+
+# uninstall
+$ helm delete fluentsearch-mongodb -n fluentsearch
 ```
 
 # Local Development
