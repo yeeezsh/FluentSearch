@@ -5,6 +5,25 @@
 - fluentsearch-fe-service `(port: 80, nodePort: 30007)`
 - fluentsearch-bff-service `(port: 3000, nodePort: 30009)`
 
+
+## MongoDB
+install via `helm`
+
+```sh
+$ helm repo add bitnami https://charts.bitnami.com/bitnami
+
+$ helm install -f ./mongodb/values.yaml fluentsearch-mongodb bitnami/mongodb-sharded -n fluentsearch
+```
+
+connect via port-forward
+
+```sh
+$ kubectl port-forward -n fluentsearch svc/fluentsearch-mongodb 27017:27017 &
+    mongo --host 127.0.0.1 --authenticationDatabase admin -p ${MONGODB_ROOT_PASSWORD}
+
+$ kubectl port-forward -n fluentsearch svc/fluentsearch-mongodb 27017:27017
+```
+
 # Local Development
 
 connect to service via minikube tunnel
