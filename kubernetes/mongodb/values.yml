@@ -1027,7 +1027,7 @@ metrics:
   podMonitor:
     ## If the operator is installed in your cluster, set to true to create a PodMonitor entry
     ##
-    enabled: true
+    enabled: false
     ## Specify the namespace in which the podMonitor resource will be created
     ##
     namespace: monitoring
