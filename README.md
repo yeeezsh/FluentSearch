@@ -7,7 +7,7 @@
 - Insight [FluentSearch-Insight](https://github.com/yee2542/FluentSearch-Insight)
 
 ## Server Setup
-- setup kebernetes on ubuntu [README.md](tree/ansible/kube-setup)
+- setup kebernetes on ubuntu [README.md](./ansible/kube-setup)
 
 ## Local Development
 
