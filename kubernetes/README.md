@@ -19,6 +19,17 @@ $ helm install -f ./mongodb/values.local.yml fluentsearch-mongodb bitnami/mongod
 $ helm install -f ./mongodb/values.yml fluentsearch-mongodb bitnami/mongodb-sharded -n fluentsearch
 ```
 
+config values
+
+| config        | value           |
+| ------------- |:-------------:|
+| shard (data node)      | 2 |
+| arbiter      | 1      |
+| config server | 2      |
+| mongos | 2      |
+| replica set key | fluentsearch      |
+| root password | Fluent$earch@MongoDB      |
+
 connect via port-forward
 
 ```sh
