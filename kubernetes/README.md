@@ -23,7 +23,8 @@ config values
 
 | config        | value           |
 | ------------- |:-------------:|
-| shard (data node)      | 2 |
+| shards (data node)      | 3 |
+| shards (replica)      | 2 |
 | arbiter      | 1      |
 | config server | 2      |
 | mongos | 2      |
