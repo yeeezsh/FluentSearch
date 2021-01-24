@@ -52,32 +52,46 @@ refs: https://github.com/bitnami/charts/tree/master/bitnami/mongodb-sharded/#ins
 connect to service via minikube tunnel
 
 ```sh
-minikube service --url $service
+$ minikube service --url $service
 
-minikube service --url fluentsearch-fe-service
+$ minikube service --url fluentsearch-fe-service
 ```
 
 port forwarding
 
 ```sh
-kubectl port-forward ${type/service} ${port} --addreess 0.0.0.0
+$ kubectl port-forward ${type/service} ${port} --addreess 0.0.0.0
 
-kubectl port-forward svc/fluentsearch-fe-service 80 --address 0.0.0.0
+$ kubectl port-forward svc/fluentsearch-fe-service 80 --address 0.0.0.0
 ```
 
 # Linkerd Injection
 
+install linkerd
+
+```sh
+# check k8s environment
+$ linkerd check --pre
+
+# install
+$ linkerd install | kubectl apply -f -
+
+# check deploy status
+$ linkerd check
+$ kubectl -n linkerd get deploy
+```
+
 inject linkerd to all services
 
 ```sh
-kubectl get deploy -n fluentsearch -o yaml | linkerd inject - | kubectl apply -f -
+$ kubectl get deploy -n fluentsearch -o yaml | linkerd inject - | kubectl apply -f -
 ```
 
 expose service
 
 ```sh
 
-kubectl -n default port-forward ${type/service} ${port} --address=0.0.0.0
+$ kubectl -n default port-forward ${type/service} ${port} --address=0.0.0.0
 
-kubectl -n default port-forward svc/fluentsearch-fe-service 80 --address=0.0.0.0
+$ kubectl -n default port-forward svc/fluentsearch-fe-service 80 --address=0.0.0.0
 ```
