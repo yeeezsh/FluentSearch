@@ -34,6 +34,7 @@ config values
 connect via port-forward
 
 ```sh
+# connect to mongos
 $ kubectl port-forward -n fluentsearch svc/fluentsearch-mongodb 27017:27017 &
     mongo --host 127.0.0.1 --authenticationDatabase admin -p ${MONGODB_ROOT_PASSWORD}
 
