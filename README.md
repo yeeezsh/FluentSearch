@@ -8,6 +8,7 @@
 
 ## Server Setup
 - setup kebernetes on ubuntu [README.md](anisible/kube-setup/)
+- setup fluentsearch on kubernetes [README.md](kubernetes/)
 
 ## Local Development
 
