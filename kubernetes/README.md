@@ -87,7 +87,7 @@ inject linkerd to all services
 $ kubectl get deploy -n fluentsearch -o yaml | linkerd inject - | kubectl apply -f -
 ```
 
-expose service
+expose service after injection
 
 ```sh
 
