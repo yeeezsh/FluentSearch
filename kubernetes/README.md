@@ -22,7 +22,7 @@ $ helm install -f ./mongodb/values.yml fluentsearch-mongodb bitnami/mongodb-shar
 config values
 
 | config        | value           |
-| ------------- |:-------------:|
+| ------------- |:-------------|
 | shards (data node)      | 3 |
 | shards (replica)      | 2 |
 | arbiter      | 1      |
