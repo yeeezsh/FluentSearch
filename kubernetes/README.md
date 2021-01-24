@@ -44,6 +44,8 @@ $ kubectl port-forward -n fluentsearch svc/fluentsearch-mongodb 27017:27017
 $ helm delete fluentsearch-mongodb -n fluentsearch
 ```
 
+refs: https://github.com/bitnami/charts/tree/master/bitnami/mongodb-sharded/#installing-the-chart
+
 # Local Development
 
 connect to service via minikube tunnel
