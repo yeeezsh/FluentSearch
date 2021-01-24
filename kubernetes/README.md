@@ -81,11 +81,17 @@ $ linkerd check
 $ kubectl -n linkerd get deploy
 ```
 
-inject linkerd to all services
+inject linkerd to pods
 
 ```sh
 # inject all service in fluentsearch namspace
 $ kubectl get deploy -n fluentsearch -o yaml | linkerd inject - | kubectl apply -f -
+
+# inject linkerd via folder target
+$ linkerd inject ${dir} | kubectl apply -f -
+
+# e.g. inject fe
+$ linkerd inject ./fe | kubectl apply -f -
 ```
 
 expose service after injection
