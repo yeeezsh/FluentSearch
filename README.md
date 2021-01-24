@@ -6,6 +6,9 @@
 - Storage [FluentSearch-Storage](https://github.com/yee2542/FluentSearch-Storage)
 - Insight [FluentSearch-Insight](https://github.com/yee2542/FluentSearch-Insight)
 
+## Server Setup
+- setup kebernetes on ubuntu [README.md](/ansible/kube-setup)
+
 ## Local Development
 
 run minikube
