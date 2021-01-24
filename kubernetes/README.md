@@ -95,3 +95,9 @@ $ kubectl -n default port-forward ${type/service} ${port} --address=0.0.0.0
 
 $ kubectl -n default port-forward svc/fluentsearch-fe-service 80 --address=0.0.0.0
 ```
+
+the Linkerd dashboard by running
+
+```sh
+$ linkerd dashboard &
+```
