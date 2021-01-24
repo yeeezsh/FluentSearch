@@ -84,13 +84,13 @@ $ kubectl -n linkerd get deploy
 inject linkerd to all services
 
 ```sh
+# inject all service in fluentsearch namspace
 $ kubectl get deploy -n fluentsearch -o yaml | linkerd inject - | kubectl apply -f -
 ```
 
 expose service after injection
 
 ```sh
-
 $ kubectl -n default port-forward ${type/service} ${port} --address=0.0.0.0
 
 $ kubectl -n default port-forward svc/fluentsearch-fe-service 80 --address=0.0.0.0
