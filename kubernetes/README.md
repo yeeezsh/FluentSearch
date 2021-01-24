@@ -6,7 +6,8 @@
 - fluentsearch-bff-service `(port: 3000, nodePort: 30009)`
 
 
-## MongoDB
+# MongoDB
+## Setup
 install via `helm`
 
 ```sh
@@ -80,6 +81,7 @@ $ kubectl port-forward svc/fluentsearch-fe-service 80 --address 0.0.0.0
 ```
 
 # Linkerd Injection
+## Setup
 
 install linkerd
 
@@ -95,6 +97,7 @@ $ linkerd check
 $ kubectl -n linkerd get deploy
 ```
 
+## Injection
 inject linkerd to pods
 
 ```sh
