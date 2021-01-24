@@ -47,6 +47,20 @@ $ helm delete fluentsearch-mongodb -n fluentsearch
 
 refs: https://github.com/bitnami/charts/tree/master/bitnami/mongodb-sharded
 
+## sharding enable
+
+```sh
+
+# enable DB
+$ sh.enableSharding("${DB_NAME}")
+$ sh.enableSharding("bff")
+
+# enable collection
+$ sh.shardCollection( "${COLLECTION_NAME}", { "_id" : "hashed" } )
+$ sh.shardCollection( "bff-test.test", { "_id" : "hashed" } )
+```
+
+
 # Local Development
 
 connect to service via minikube tunnel
