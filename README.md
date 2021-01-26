@@ -15,7 +15,7 @@
 run minikube
 
 ```sh
-$ minikube start --cpus=4 --memory=6144
+$ minikube start --vm=true --cpus=4 --memory=6144
 ```
 
 connect to service via minikube tunnel
