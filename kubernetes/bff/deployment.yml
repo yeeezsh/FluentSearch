@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fluentsearch-bff
+  labels:
+    app: fluentsearch-bff
+  namespace: fluentsearch
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fluentsearch-bff
+  template:
+    metadata:
+      annotations:
+        linkerd.io/inject: enabled
+      labels:
+        app: fluentsearch-bff
+    spec:
+      containers:
+        - name: fluentsearch-bff
+          image: yee2542/fluentsearch-bff:latest
+          ports:
+            - containerPort: 5000
+          envFrom:
+            - configMapRef:
+                name: fluentsearch-bff-config

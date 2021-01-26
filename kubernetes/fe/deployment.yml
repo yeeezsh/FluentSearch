@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: fluentsearch-fe
+  namespace: fluentsearch
   labels:
     app: fluentsearch-fe
 spec:
@@ -11,11 +12,14 @@ spec:
       app: fluentsearch-fe
   template:
     metadata:
+      annotations:
+        linkerd.io/inject: enabled
       labels:
         app: fluentsearch-fe
     spec:
       containers:
         - name: fluentsearch-fe
-          image: yee2542/fluentsearch-fe
+          image: yee2542/fluentsearch-fe:latest
           ports:
             - containerPort: 80
+              name: http
