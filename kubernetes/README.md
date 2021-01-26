@@ -7,7 +7,7 @@
 - kubernetes-dashboard `(port: 443)`
 
 # Ingress
-- kubernetes-dashboard `(host: dashboard.fluentsearch.local )`
+- kubernetes-dashboard `(host: dashboard.fluentsearch.local)`
 
 # Dashboard
 setup dashboard to controll the master
@@ -19,7 +19,6 @@ $ kubectl apply -f ./dashboard
 # get token key
 $ kubectl -n kubernetes-dashboard get secret $(kubectl -n kubernetes-dashboard get sa/admin-user -o jsonpath="{.secrets[0].name}") -o go-template="{{.data.token | base64decode}}"
 ```
-
 
 # MongoDB
 ## Setup
