@@ -21,7 +21,7 @@ $ kubectl -n rook-ceph get pod
 
 after setup Ceph operator and `rook-ceph-operator` is running, now can create the Ceph cluster
 ```sh
-# local
+# local on minikube
 $ kubectl create -f ceph/cluster.local.yaml
 
 # production
@@ -29,6 +29,24 @@ $ kubectl create -f ceph/cluster.yaml
 
 # check all pods are running
 $ kubectl -n rook-ceph get pod
+```
+
+create first object storage
+
+```sh
+$ kubectl create ceph/object.yaml
+```
+
+moniotring mon, osd via ceph-dashboard.
+```sh
+# get admin password
+$ kubectl -n rook-ceph get secret rook-ceph-dashboard-password -o jsonpath="{['data']['password']}" | base64 --decode && echo
+
+# expose via kube proxy
+$ kubectl proxy
+
+# links
+http://localhost:8001/api/v1/namespaces/rook-ceph/services/https:rook-ceph-mgr-dashboard:https-dashboard/proxy/
 ```
 
 # Dashboard
