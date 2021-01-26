@@ -4,6 +4,21 @@
 # Services
 - fluentsearch-fe-service `(port: 80, nodePort: 30007)`
 - fluentsearch-bff-service `(port: 3000, nodePort: 30009)`
+- kubernetes-dashboard `(port: 443)`
+
+# Ingress
+- kubernetes-dashboard `(host: dashboard.fluentsearch.local )`
+
+# Dashboard
+setup dashboard to controll the master
+
+```sh
+# install
+$ kubectl apply -f ./dashboard
+
+# get token key
+$ kubectl -n kubernetes-dashboard get secret $(kubectl -n kubernetes-dashboard get sa/admin-user -o jsonpath="{.secrets[0].name}") -o go-template="{{.data.token | base64decode}}"
+```
 
 
 # MongoDB
