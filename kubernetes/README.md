@@ -10,12 +10,24 @@
 - kubernetes-dashboard `(host: dashboard.fluentsearch.local)`
 
 # Ceph
-setup ceph to provide storage class
+setup Ceph Operator for provide a storage class
 ```sh
 # setup
 $ kubectl create -f ./ceph/deployment
 
 # check operator
+$ kubectl -n rook-ceph get pod
+```
+
+after setup Ceph operator and `rook-ceph-operator` is running, now can create the Ceph cluster
+```sh
+# local
+$ kubectl create -f ./ceph/cluster.local.yaml
+
+# production
+$ kubectl create -f ./ceph/cluster.yaml
+
+# check all pods are running
 $ kubectl -n rook-ceph get pod
 ```
 
