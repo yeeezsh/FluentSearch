@@ -9,6 +9,16 @@
 # Ingress
 - kubernetes-dashboard `(host: dashboard.fluentsearch.local)`
 
+# Ceph
+setup ceph to provide storage class
+```sh
+# setup
+$ kubectl create -f ./ceph/deployment
+
+# check operator
+$ kubectl -n rook-ceph get pod
+```
+
 # Dashboard
 setup dashboard to controll the master
 
