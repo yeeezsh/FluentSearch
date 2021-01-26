@@ -12,10 +12,20 @@
 
 ## Local Development
 
-run minikube
+### Prerequisite
+
+- Kubernetes v1.20.0
+- Docker (macOS) v20.10.0
+- Nginx Ingress
+
+following these commands for prepare an environment
 
 ```sh
+# start minikube
 $ minikube start --vm=true --cpus=4 --memory=6144
+
+# add ingress
+$ minikube addons enable ingress
 ```
 
 connect to service via minikube tunnel
