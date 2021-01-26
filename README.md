@@ -13,7 +13,7 @@
 ## Local Development
 
 ### Prerequisite
-
+- Minikube v1.16.0
 - Kubernetes v1.20.0
 - Docker (macOS) v20.10.0
 - Nginx Ingress
