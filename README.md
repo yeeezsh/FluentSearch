@@ -12,16 +12,26 @@
 
 ## Local Development
 
-run minikube
+### Prerequisite
+
+- Kubernetes v1.20.0
+- Docker (macOS) v20.10.0
+- Nginx Ingress
+
+following these commands for prepare an environment
 
 ```sh
-$ minikube start --cpus=4 --memory=6144
+# start minikube
+$ minikube start --vm=true --cpus=4 --memory=6144
+
+# add ingress
+$ minikube addons enable ingress
 ```
 
 connect to service via minikube tunnel
 
 ```sh
-$ minikube service --url $service
+$ minikube service -n fluentsearch --url $service
 
 $ minikube service --url fluentsearch-fe-service
 ```
@@ -31,5 +41,5 @@ port forwarding
 ```sh
 $ kubectl port-forward ${type/service} ${port} --addreess 0.0.0.0
 
-$ kubectl port-forward svc/fluentsearch-fe-service 80 --address 0.0.0.0
+$ kubectl port-forward -n fluentsearch svc/fluentsearch-fe-service 80 --address 0.0.0.0
 ```
