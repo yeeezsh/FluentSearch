@@ -24,7 +24,7 @@ metadata:
   name: my-cluster
   namespace: rook-ceph # namespace:cluster
 spec:
-  dataDirHostPath: /var/lib/rook
+  dataDirHostPath: /data/rook
   cephVersion:
     image: ceph/ceph:v15
     allowUnsupported: true
@@ -33,6 +33,8 @@ spec:
     allowMultiplePerNode: true
   dashboard:
     enabled: true
+    ssl: true
+    port: 8443
   crashCollector:
     disable: true
   storage:
