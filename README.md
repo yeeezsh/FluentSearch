@@ -17,12 +17,16 @@
 - Kubernetes v1.20.0
 - Docker (macOS) v20.10.0
 - Nginx Ingress
+- Virtual box v6.1.18
 
 following these commands for prepare an environment
 
 ```sh
 # start minikube
 $ minikube start --vm=true --cpus=4 --memory=6144
+
+# virtual box driver
+$ minikube start --vm-driver=virtualbox --cpus=4 --memory=6144
 
 # add ingress
 $ minikube addons enable ingress
