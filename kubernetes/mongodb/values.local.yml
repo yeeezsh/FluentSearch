@@ -408,7 +408,7 @@ shardsvr:
       - ReadWriteOnce
     ## PersistentVolumeClaim size
     ##
-    size: 8Gi
+    size: 0.5Gi
     ## Additional volume annotations
     ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
     ##
