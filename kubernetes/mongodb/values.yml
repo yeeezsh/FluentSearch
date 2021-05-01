@@ -2,7 +2,8 @@
 ## Please, note that this will override the image parameters, including dependencies, configured to use the global value
 ## Current available global Docker image parameters: imageRegistry, imagePullSecrets and storageClass
 ##
-global: {}
+global:
+  storageClass: rook-cephfs
 #   imageRegistry: myRegistryName
 #   imagePullSecrets:
 #     - myRegistryKeySecretName
@@ -408,7 +409,7 @@ shardsvr:
       - ReadWriteOnce
     ## PersistentVolumeClaim size
     ##
-    size: 8Gi
+    size: 2Gi
     ## Additional volume annotations
     ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
     ##

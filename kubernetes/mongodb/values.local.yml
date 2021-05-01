@@ -2,11 +2,11 @@
 ## Please, note that this will override the image parameters, including dependencies, configured to use the global value
 ## Current available global Docker image parameters: imageRegistry, imagePullSecrets and storageClass
 ##
-global: {}
-#   imageRegistry: myRegistryName
-#   imagePullSecrets:
-#     - myRegistryKeySecretName
-#   storageClass: myStorageClass
+global:
+  #   imageRegistry: myRegistryName
+  #   imagePullSecrets:
+  #     - myRegistryKeySecretName
+  storageClass: rook-cephfs
 
 ## Bitnami MongoDB Sharded image version
 ## ref: https://hub.docker.com/r/bitnami/mongodb-sharded/tags/
@@ -408,7 +408,7 @@ shardsvr:
       - ReadWriteOnce
     ## PersistentVolumeClaim size
     ##
-    size: 8Gi
+    size: 0.5Gi
     ## Additional volume annotations
     ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
     ##
