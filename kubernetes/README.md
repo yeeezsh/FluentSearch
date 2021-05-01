@@ -8,7 +8,6 @@
 - fluentsearch-fe-service `(port: 80, nodePort: 30007)`
 - fluentsearch-bff-service `(port: 3000, nodePort: 30009)`
 - kubernetes-dashboard `(port: 443)`
-- rook-ceph-mgr-dashboard-external `(port: 8443, nodePort: 30010)`
 
 # Ingress
 
@@ -152,7 +151,11 @@ $ linkerd dashboard &
 
 deprecated document
 
-# Ceph
+## Services
+
+- rook-ceph-mgr-dashboard-external `(port: 8443, nodePort: 30010)`
+
+## Ceph
 
 setup Ceph Operator for provide a storage class
 
