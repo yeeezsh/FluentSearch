@@ -150,6 +150,8 @@ $ linkerd dashboard &
 
 # Archive
 
+deprecated document
+
 # Ceph
 
 setup Ceph Operator for provide a storage class
