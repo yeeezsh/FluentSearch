@@ -5,6 +5,8 @@
 - Backend for Frontend [FluentSearch-BFF](https://github.com/yee2542/FluentSearch-BFF)
 - Storage [FluentSearch-Storage](https://github.com/yee2542/FluentSearch-Storage)
 - Insight [FluentSearch-Insight](https://github.com/yee2542/FluentSearch-Insight)
+- Insight Video [FluentSearch-Insight-Video](https://github.com/yee2542/FluentSearch-Insight-Video)
+- Mini [FluentSearch-Mini](https://github.com/yee2542/FluentSearch-Mini)
 
 ## Server Setup
 - setup kebernetes on ubuntu [README.md](anisible/kube-setup/)
