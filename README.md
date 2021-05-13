@@ -6,6 +6,8 @@
 - Storage [FluentSearch-Storage](https://github.com/yee2542/FluentSearch-Storage)
 - Insight [FluentSearch-Insight](https://github.com/yee2542/FluentSearch-Insight)
 - Insight Video [FluentSearch-Insight-Video](https://github.com/yee2542/FluentSearch-Insight-Video)
+- Types [FluentSearch-Types](https://github.com/yee2542/FluentSearch-Types)
+
 - Mini [FluentSearch-Mini](https://github.com/yee2542/FluentSearch-Mini)
 
 ## Server Setup
