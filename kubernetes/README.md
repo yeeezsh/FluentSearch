@@ -13,6 +13,12 @@
 
 - kubernetes-dashboard `(host: dashboard.fluentsearch.local)`
 
+# BFF
+
+```sh
+$ kubectl create -f ./bff
+```
+
 # Dashboard
 
 setup dashboard to controll the master
