@@ -12,6 +12,8 @@ spec:
       app: fluentsearch-bff
   template:
     metadata:
+      annotations:
+        linkerd.io/inject: enabled
       labels:
         app: fluentsearch-bff
     spec:
