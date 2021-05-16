@@ -1,0 +1,23 @@
+kubectl minio tenant create minio-tenant-1 \
+      --servers 4                             \
+      --volumes 4                            \
+      --capacity 20Gi                         \
+      --namespace object-storage              \
+      --storage-class local-storage        \
+
+kubectl minio tenant create minio-tenant-1 \
+      --servers 4                             \
+      --volumes 4                            \
+      --capacity 20Gi                         \
+      --namespace object-storage              \
+      --storage-class do-block-storage        \
+
+            
+kubectl minio proxy -n minio-operator 
+
+
+Tenant 'minio-tenant-1' created in 'object-storage' Namespace
+
+  Username: admin 
+  Password: 61906315-9e4d-420e-a02b-334bf4ded566 
+  Note: Copy the credentials to a secure location. MinIO will not display these again.
