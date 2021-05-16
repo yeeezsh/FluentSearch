@@ -7,7 +7,7 @@ data:
   NODE_ENV: "development"
   TZ: "Asia/Bangkok"
   ORIGIN: "http(|s)://fluentsearch.ml"
-  DATABASE_CONNECTION: "mongodb://fluentsearch-mongodb-mongodb-sharded.fluentsearch-mongo-db.svc.cluster.local/fluentsearch-bff"
+  DATABASE_CONNECTION: "mongodb://fluentsearch-mongodb-mongodb-sharded.fluentsearch-mongo-db.cluster.local/fluentsearch-bff"
   DATABASE_USERAME: "root"
   DATABASE_PASSWORD: "FluentSearch@BFF.MongoDB"
   DATABASE_AUTH_SOURCE: "admin"
