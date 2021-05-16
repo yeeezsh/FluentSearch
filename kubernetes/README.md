@@ -35,10 +35,10 @@ install via `helm`
 $ helm repo add bitnami https://charts.bitnami.com/bitnami
 
 # local
-$ helm install -f mongodb/values.local.yml fluentsearch-mongodb bitnami/mongodb-sharded -n fluentsearch
+$ helm install -f mongodb/values.local.yml fluentsearch-mongodb bitnami/mongodb-sharded -n fluentsearch-mongo-db
 
 # production
-$ helm install -f mongodb/values.yml fluentsearch-mongodb bitnami/mongodb-sharded -n fluentsearch
+$ helm install -f mongodb/values.yml fluentsearch-mongodb bitnami/mongodb-sharded -n fluentsearch-mongo-db
 ```
 
 config values
@@ -57,14 +57,17 @@ connect via port-forward
 
 ```sh
 # connect to mongos
-$ kubectl port-forward -n fluentsearch svc/fluentsearch-mongodb 27017:27017 &
+$ kubectl port-forward -n fluentsearch-mongo-db svc/fluentsearch-mongodb 27017:27017 &
     mongo --host 127.0.0.1 --authenticationDatabase admin -p ${MONGODB_ROOT_PASSWORD}
 
 # port forward
-$ kubectl port-forward -n fluentsearch svc/fluentsearch-mongodb 27017:27017
+$ kubectl port-forward -n fluentsearch-mongo-db svc/fluentsearch-mongodb 27017:27017
 
 # uninstall
-$ helm delete fluentsearch-mongodb -n fluentsearch
+$ helm delete fluentsearch-mongodb -n fluentsearch-mongo-db
+
+# proxy
+kubectl port-forward --namespace fluentsearch-mongo-db svc/fluentsearch-mongodb-mongodb-sharded 27017:27017
 ```
 
 refs: https://github.com/bitnami/charts/tree/master/bitnami/mongodb-sharded
