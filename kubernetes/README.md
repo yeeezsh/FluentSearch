@@ -5,15 +5,18 @@
 
 # Services
 
-- fluentsearch-fe-service `(port: 80, nodePort: 30007)`
-- fluentsearch-bff-service `(port: 3000, nodePort: 30009)`
+- fluentsearch-fe-service `(port: 3000)`
+- fluentsearch-bff-service `(port: 5000)`
+- fluentsearch-storage-service `(port: 3000)`
 - kubernetes-dashboard `(port: 443)`
+- fluentsearch-mongodb-mongodb-sharded `(port: 27017)`
 
 # Ingress
 
 - kubernetes-dashboard `(host: dashboard.fluentsearch.local)`
 - fluentsearch-bff-ingress `(host: api.fluentsearch.ml)`
 - fluentsearch-fe-ingress `(host: fluentsearch.ml)`
+- fluentsearch-storage-ingress `(host: storage.fluentsearch.ml)`
 
 # FE
 
@@ -27,6 +30,13 @@ $ kubectl create -f ./fe
 ```sh
 $ kubectl create namespace fluentsearch-bff
 $ kubectl create -f ./bff
+```
+
+# Storage
+
+```sh
+$ kubectl create namespace fluentsearch-storage
+$ kubectl create -f ./storage
 ```
 
 # Dashboard
