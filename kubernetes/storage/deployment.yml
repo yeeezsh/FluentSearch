@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fluentsearch-storage
+  namespace: fluentsearch-storage
+  labels:
+    app: fluentsearch-storage
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fluentsearch-storage
+  template:
+    metadata:
+      annotations:
+        linkerd.io/inject: enabled
+      labels:
+        app: fluentsearch-storage
+    spec:
+      containers:
+        - name: fluentsearch-storage
+          image: yee2542/fluentsearch-storage:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+              name: http
+          envFrom:
+            - configMapRef:
+                name: fluentsearch-storage-config
