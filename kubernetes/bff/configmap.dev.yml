@@ -2,13 +2,13 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: fluentsearch-bff-config
-  namespace: fluentsearch
+  namespace: fluentsearch-bff
 data:
   NODE_ENV: "development"
   TZ: "Asia/Bangkok"
-  ORIGIN: "http(|s)://10.35.29.62:5000"
-  DATABASE_CONNECTION: "mongodb://fluentsearch-mongodb/fluentsearch-bff"
-  DATABASE_USERAME: "root"
-  DATABASE_PASSWORD: "FluentSearch@BFF.MongoDB"
+  ORIGIN: "http(|s)://fluentsearch.ml"
+  DATABASE_CONNECTION: "mongodb://fluentsearch-mongodb-mongodb-sharded.fluentsearch-mongo-db.svc.cluster.local/fluentsearch-bff"
+  DATABASE_USERNAME: "root"
+  DATABASE_PASSWORD: "Fluent$earch@MongoDB"
   DATABASE_AUTH_SOURCE: "admin"
   PORT: "5000"

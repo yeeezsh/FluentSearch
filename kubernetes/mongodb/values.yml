@@ -92,7 +92,7 @@ shardsvr:
     subPath: ""
     accessModes:
       - ReadWriteOnce
-    size: 6Gi
+    size: 12Gi
     annotations: {}
 
 configsvr:
@@ -134,7 +134,7 @@ configsvr:
     subPath: ""
     accessModes:
       - ReadWriteOnce
-    size: 3Gi
+    size: 5Gi
     annotations: {}
   serviceAccount:
     create: false
