@@ -29,6 +29,13 @@ $ kubectl create namespace fluentsearch-bff
 $ kubectl create -f ./bff
 ```
 
+# Storage
+
+```sh
+$ kubectl create namespace fluentsearch-storage
+$ kubectl create -f ./storage
+```
+
 # Dashboard
 
 setup dashboard to controll the master
