@@ -12,6 +12,7 @@
 # Ingress
 
 - kubernetes-dashboard `(host: dashboard.fluentsearch.local)`
+- fluentsearch-bff-ingress `(host: api.fluentsearch.ml)`
 
 # BFF
 
