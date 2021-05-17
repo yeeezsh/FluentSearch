@@ -6,10 +6,7 @@ metadata:
   annotations:
     linkerd.io/inject: enabled
 spec:
-  type: NodePort
   selector:
     app: fluentsearch-bff
   ports:
-    - port: 3000
-      targetPort: 3000
-      nodePort: 30009
+    - port: 5000
