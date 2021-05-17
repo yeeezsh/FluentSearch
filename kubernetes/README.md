@@ -13,6 +13,14 @@
 
 - kubernetes-dashboard `(host: dashboard.fluentsearch.local)`
 - fluentsearch-bff-ingress `(host: api.fluentsearch.ml)`
+- fluentsearch-fe-ingress `(host: fluentsearch.ml)`
+
+# FE
+
+```sh
+$ kubectl create namespace fluentsearch-fe
+$ kubectl create -f ./fe
+```
 
 # BFF
 
