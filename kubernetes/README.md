@@ -14,6 +14,7 @@
 - kubernetes-dashboard `(host: dashboard.fluentsearch.local)`
 - fluentsearch-bff-ingress `(host: api.fluentsearch.ml)`
 - fluentsearch-fe-ingress `(host: fluentsearch.ml)`
+- fluentsearch-storage-ingress `(host: storage.fluentsearch.ml)`
 
 # FE
 
