@@ -16,6 +16,7 @@
 # BFF
 
 ```sh
+$ kubectl create namespace fluentsearch-bff
 $ kubectl create -f ./bff
 ```
 
