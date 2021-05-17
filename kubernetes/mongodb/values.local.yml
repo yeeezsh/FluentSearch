@@ -6,7 +6,7 @@ global:
   #   imageRegistry: myRegistryName
   #   imagePullSecrets:
   #     - myRegistryKeySecretName
-  storageClass: rook-cephfs
+  storageClass: standard
 
 ## Bitnami MongoDB Sharded image version
 ## ref: https://hub.docker.com/r/bitnami/mongodb-sharded/tags/
