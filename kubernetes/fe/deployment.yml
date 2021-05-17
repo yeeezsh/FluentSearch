@@ -20,6 +20,7 @@ spec:
       containers:
         - name: fluentsearch-fe
           image: yee2542/fluentsearch-fe:latest
+          imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 3000
               name: http
