@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fluentsearch-storage-service
+  namespace: fluentsearch-storage
+  annotations:
+    linkerd.io/inject: enabled
+spec:
+  selector:
+    app: fluentsearch-storage
+  ports:
+    - port: 3000
