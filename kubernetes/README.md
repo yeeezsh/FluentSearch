@@ -98,7 +98,7 @@ $ kubectl port-forward svc/minio-tenant-1-console 9443:9443 -n minio-tenant-1
 
 | username | password           |
 | -------- | :----------------- |
-| admin    | - (generated)      |
+| admin    | (generated)        |
 | root     | Fluent$earch@Minio |
 
 # MongoDB
