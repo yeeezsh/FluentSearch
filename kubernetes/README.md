@@ -46,7 +46,7 @@ $ kubectl create ns minio-tenant-1
 $ kubectl minio tenant create minio-tenant-1 \
       --servers 2                             \
       --volumes 4                            \
-      --capacity 50Gi                         \
+      --capacity 80Gi                         \
       --namespace minio-tenant-1              \
       --storage-class do-block-storage
 ```
