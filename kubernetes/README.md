@@ -83,6 +83,8 @@ operator access
 
 ```sh
 $ kubectl minio proxy -n minio-operator
+# $ kubectl port-forward svc/console 9443:9443 -n minio-operator #
+$ kubectl port-forward svc/console 9090:9090 -n minio-operator
 ```
 
 tenant access
