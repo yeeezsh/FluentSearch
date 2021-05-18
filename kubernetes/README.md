@@ -51,6 +51,21 @@ $ kubectl minio tenant create minio-tenant-1 \
       --storage-class do-block-storage
 ```
 
+## Access
+
+operator access
+
+```sh
+$ kubectl minio proxy -n minio-operator
+```
+
+tenant access
+
+```sh
+$ kubectl port-forward svc/minio 9000:443 -n minio-tenant-1
+$ kubectl port-forward svc/minio-tenant-1-console 9443:9443 -n minio-tenant-1
+```
+
 # MongoDB
 
 ## Setup
