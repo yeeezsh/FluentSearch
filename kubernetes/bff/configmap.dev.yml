@@ -6,7 +6,7 @@ metadata:
 data:
   NODE_ENV: "production"
   TZ: Asia/Bangkok
-  ORIGIN: "http(|s)://api.fluentsearch.ml"
+  ORIGIN: "http(|s)://api.fluentsearch.ml|localhost|fluentsearch.ml"
   DATABASE_CONNECTION: "mongodb://fluentsearch-mongodb-mongodb-sharded.fluentsearch-mongo-db.svc.cluster.local/fluentsearch-bff"
   DATABASE_USERNAME: root
   DATABASE_PASSWORD: Fluent$earch@MongoDB
