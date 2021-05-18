@@ -5,13 +5,39 @@
 
 # Services
 
-- fluentsearch-fe-service `(port: 80, nodePort: 30007)`
-- fluentsearch-bff-service `(port: 3000, nodePort: 30009)`
+- fluentsearch-fe-service `(port: 3000)`
+- fluentsearch-bff-service `(port: 5000)`
+- fluentsearch-storage-service `(port: 3000)`
 - kubernetes-dashboard `(port: 443)`
+- fluentsearch-mongodb-mongodb-sharded `(port: 27017)`
 
 # Ingress
 
 - kubernetes-dashboard `(host: dashboard.fluentsearch.local)`
+- fluentsearch-bff-ingress `(host: api.fluentsearch.ml)`
+- fluentsearch-fe-ingress `(host: fluentsearch.ml)`
+- fluentsearch-storage-ingress `(host: storage.fluentsearch.ml)`
+
+# FE
+
+```sh
+$ kubectl create namespace fluentsearch-fe
+$ kubectl create -f ./fe
+```
+
+# BFF
+
+```sh
+$ kubectl create namespace fluentsearch-bff
+$ kubectl create -f ./bff
+```
+
+# Storage
+
+```sh
+$ kubectl create namespace fluentsearch-storage
+$ kubectl create -f ./storage
+```
 
 # Dashboard
 
@@ -76,10 +102,10 @@ install via `helm`
 $ helm repo add bitnami https://charts.bitnami.com/bitnami
 
 # local
-$ helm install -f mongodb/values.local.yml fluentsearch-mongodb bitnami/mongodb-sharded -n fluentsearch
+$ helm install -f mongodb/values.local.yml fluentsearch-mongodb bitnami/mongodb-sharded -n fluentsearch-mongo-db
 
 # production
-$ helm install -f mongodb/values.yml fluentsearch-mongodb bitnami/mongodb-sharded -n fluentsearch
+$ helm install -f mongodb/values.yml fluentsearch-mongodb bitnami/mongodb-sharded -n fluentsearch-mongo-db
 ```
 
 config values
@@ -98,14 +124,17 @@ connect via port-forward
 
 ```sh
 # connect to mongos
-$ kubectl port-forward -n fluentsearch svc/fluentsearch-mongodb 27017:27017 &
+$ kubectl port-forward -n fluentsearch-mongo-db svc/fluentsearch-mongodb 27017:27017 &
     mongo --host 127.0.0.1 --authenticationDatabase admin -p ${MONGODB_ROOT_PASSWORD}
 
 # port forward
-$ kubectl port-forward -n fluentsearch svc/fluentsearch-mongodb 27017:27017
+$ kubectl port-forward -n fluentsearch-mongo-db svc/fluentsearch-mongodb 27017:27017
 
 # uninstall
-$ helm delete fluentsearch-mongodb -n fluentsearch
+$ helm delete fluentsearch-mongodb -n fluentsearch-mongo-db
+
+# proxy
+kubectl port-forward --namespace fluentsearch-mongo-db svc/fluentsearch-mongodb-mongodb-sharded 27017:27017
 ```
 
 refs: https://github.com/bitnami/charts/tree/master/bitnami/mongodb-sharded
