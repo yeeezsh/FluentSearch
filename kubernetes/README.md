@@ -25,6 +25,31 @@ $ kubectl apply -f dashboard
 $ kubectl -n kubernetes-dashboard get secret $(kubectl -n kubernetes-dashboard get sa/admin-user -o jsonpath="{.secrets[0].name}") -o go-template="{{.data.token | base64decode}}"
 ```
 
+# Minio
+
+## Prerequisite
+
+- krew [install guide](https://krew.sigs.k8s.io/docs/user-guide/setup/install/)
+
+## Setup
+
+create operator
+
+```sh
+$ kubectl minio init
+```
+
+create tenant
+
+```sh
+$   kubectl minio tenant create minio-tenant-1 \
+      --servers 2                             \
+      --volumes 4                            \
+      --capacity 5Gi                         \
+      --namespace minio-tenant-1              \
+      --storage-class standard
+```
+
 # MongoDB
 
 ## Setup
