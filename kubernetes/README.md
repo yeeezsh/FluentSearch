@@ -42,12 +42,13 @@ $ kubectl minio init
 create tenant
 
 ```sh
-$   kubectl minio tenant create minio-tenant-1 \
+$ kubectl create ns minio-tenant-1
+$ kubectl minio tenant create minio-tenant-1 \
       --servers 2                             \
       --volumes 4                            \
-      --capacity 5Gi                         \
+      --capacity 50Gi                         \
       --namespace minio-tenant-1              \
-      --storage-class standard
+      --storage-class do-block-storage
 ```
 
 # MongoDB
