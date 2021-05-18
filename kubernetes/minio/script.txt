@@ -21,3 +21,26 @@ Tenant 'minio-tenant-1' created in 'object-storage' Namespace
   Username: admin 
   Password: 61906315-9e4d-420e-a02b-334bf4ded566 
   Note: Copy the credentials to a secure location. MinIO will not display these again.
+
+  ------------------------------------------------------------------------------------------------------------------------
+
+  New Tenant Created
+A new Tenant has been created with the following details:
+Console Credentials
+Access Key: YVM3AO5CH2EIXCSQ
+Secret Key: AOMPOIFOUHYSBCDW1L3JTSR4VK4XYA0V
+
+
+kubectl get tenant -n minio-tenant-1
+kubectl get tenant -n object-storage
+kubectl get tenant -n user-storage
+
+kubectl port-forward svc/minio 9000:443 -n minio-tenant-1
+kubectl port-forward svc/minio 9000:443 -n object-storage
+
+kubectl port-forward svc/minio 9000:443 -n object-storage
+
+kubectl minio tenant info user-storage \
+  --namespace object-storage
+
+kubectl minio proxy -n minio-operator
