@@ -16,3 +16,5 @@ data:
   SESSION_SECRET: session1secret
   SESSION_EXPIRES: "86400000"
   PORT: "5000"
+  HOSTNAME: "api.fluentsearch.ml"
+  MAIN_HOSTNAME: "fluentsearch.ml"
