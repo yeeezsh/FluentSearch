@@ -18,3 +18,4 @@ data:
   PORT: "5000"
   HOSTNAME: "api.fluentsearch.ml"
   MAIN_HOSTNAME: "fluentsearch.ml"
+  STORAGE_ENDPOINT: storage.fluentsearch.ml
