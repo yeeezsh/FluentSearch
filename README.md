@@ -1,4 +1,4 @@
-# FluentSerch
+# FluentSearch
 
 ## repository
 - Frontend [FluentSearch-FE](https://github.com/yee2542/FluentSearch-FE)
