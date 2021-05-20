@@ -77,6 +77,19 @@ $ kubectl minio tenant create minio-tenant-1 \
       --storage-class do-block-storage
 ```
 
+config values
+
+| config        | value                  |
+| ------------- | :--------------------- |
+| namespaces    | minio-tenant-1         |
+| operator      | 1 (ns: minio-operator) |
+| server        | 2                      |
+| volume        | 4                      |
+| capacity      | 100Gi                  |
+| storage-class | do-block-storage       |
+| user          | root                   |
+| password      | Fluent$earch@Minio     |
+
 ## Access
 
 operator access
