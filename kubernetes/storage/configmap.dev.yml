@@ -17,3 +17,8 @@ data:
   SESSION_EXPIRES: "86400000"
   PORT: "3000"
   STORAGE_HOSTNAME: "storage.fluentsearch.ml"
+  MINIO_ACCESS_KEY: "root"
+  MINIO_SECRET_KEY: "Fluent$earch@Minio"
+  MINIO_SERVER_ENDPOINT: "minio.minio-tenant-1.svc.cluster.local"
+  MINIO_SERVER_PORT: "443"
+  MINIO_SERVER_SSL: "true"
