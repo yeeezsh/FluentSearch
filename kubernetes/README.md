@@ -2,6 +2,7 @@
 
 - fluentsearch-fe `(port: 80)`
 - fluentsearch-bff `(port: 3000)`
+- fluentsearch-storage `(port: 3000)`
 
 # Services
 
