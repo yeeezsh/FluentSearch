@@ -2,6 +2,7 @@
 
 - fluentsearch-fe `(port: 80)`
 - fluentsearch-bff `(port: 3000)`
+- fluentsearch-storage `(port: 3000)`
 
 # Services
 
@@ -10,6 +11,7 @@
 - fluentsearch-storage-service `(port: 3000)`
 - kubernetes-dashboard `(port: 443)`
 - fluentsearch-mongodb-mongodb-sharded `(port: 27017)`
+- rabbitmq `(port:5672,15672)`
 
 # Ingress
 
@@ -50,6 +52,55 @@ $ kubectl apply -f dashboard
 # get token key
 $ kubectl -n kubernetes-dashboard get secret $(kubectl -n kubernetes-dashboard get sa/admin-user -o jsonpath="{.secrets[0].name}") -o go-template="{{.data.token | base64decode}}"
 ```
+
+# RabbitMQ
+
+## Setup
+
+add helm repo
+
+```bash
+$ helm repo add bitnami https://charts.bitnami.com/bitnami
+```
+
+create namespace
+
+```bash
+kubectl apply -f ./rabbitmq/namespace.yml
+```
+
+release
+
+```bash
+$ helm install -f ./rabbitmq/values.yml rabbitmq -n fluentsearch-mq bitnami/rabbitmq
+
+```
+
+## Access
+
+RabbitMQ AMQP port:
+
+```bash
+kubectl port-forward --namespace fluentsearch-mq svc/rabbitmq 5672:5672
+```
+
+RabbitMQ Management interface
+
+```bash
+kubectl port-forward --namespace fluentsearch-mq svc/rabbitmq 15672:15672
+```
+
+## Config
+
+| config        | value                |
+| ------------- | :------------------- |
+| namespaces    | fluentsearch-mq      |
+| server        | 1                    |
+| volume        | 1                    |
+| volume size   | 2Gi                  |
+| storage-class | do-block-storage     |
+| user          | root                 |
+| password      | FluentSearchRabbitMQ |
 
 # Minio
 
