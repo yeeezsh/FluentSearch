@@ -51,6 +51,55 @@ $ kubectl apply -f dashboard
 $ kubectl -n kubernetes-dashboard get secret $(kubectl -n kubernetes-dashboard get sa/admin-user -o jsonpath="{.secrets[0].name}") -o go-template="{{.data.token | base64decode}}"
 ```
 
+# RabbitMQ
+
+## Setup
+
+add helm repo
+
+```bash
+$ helm repo add bitnami https://charts.bitnami.com/bitnami
+```
+
+create namespace
+
+```bash
+kubectl apply -f ./rabbitmq/namespace.yml
+```
+
+release
+
+```bash
+$ helm install -f ./rabbitmq/values.yml rabbitmq -n fluentsearch-mq bitnami/rabbitmq
+
+```
+
+## Access
+
+RabbitMQ AMQP port:
+
+```bash
+kubectl port-forward --namespace fluentsearch-mq svc/rabbitmq 5672:5672
+```
+
+RabbitMQ Management interface
+
+```bash
+kubectl port-forward --namespace fluentsearch-mq svc/rabbitmq 15672:15672
+```
+
+## Config
+
+| config        | value                |
+| ------------- | :------------------- |
+| namespaces    | fluentsearch-mq      |
+| server        | 1                    |
+| volume        | 1                    |
+| volume size   | 2Gi                  |
+| storage-class | do-block-storage     |
+| user          | root                 |
+| password      | FluentSearchRabbitMQ |
+
 # Minio
 
 ## Prerequisite
