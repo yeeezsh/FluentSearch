@@ -1,0 +1,9 @@
+auth:
+  username: root
+  password: FluentSearchRabbitMQ
+nodeSelector:
+  doks.digitalocean.com/node-pool: rabbit-mq-pool
+persistence:
+  enabled: true
+  storageClass: do-block-storage
+  size: 2Gi
