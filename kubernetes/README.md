@@ -10,6 +10,7 @@
 - fluentsearch-storage-service `(port: 3000)`
 - kubernetes-dashboard `(port: 443)`
 - fluentsearch-mongodb-mongodb-sharded `(port: 27017)`
+- rabbitmq `(port:5672,15672)`
 
 # Ingress
 
