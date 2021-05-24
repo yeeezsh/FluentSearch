@@ -22,3 +22,6 @@ data:
   MINIO_SERVER_ENDPOINT: "minio.minio-tenant-1.svc.cluster.local"
   MINIO_SERVER_PORT: "443"
   MINIO_SERVER_SSL: "true"
+  RABBITMQ_ENDPOINT: "rabbitmq.fluentsearch-mq.svc.cluster.local"
+  RABBITMQ_USERNAME: "root"
+  RABBITMQ_PASSWORD: "FluentSearchRabbitMQ"
