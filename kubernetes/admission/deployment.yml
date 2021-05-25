@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fluentsearch-admission
+  namespace: fluentsearch-admission
+  labels:
+    app: fluentsearch-admission
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fluentsearch-admission
+  template:
+    metadata:
+      annotations:
+        linkerd.io/inject: enabled
+      labels:
+        app: fluentsearch-admission
+    spec:
+      containers:
+        - name: fluentsearch-admission
+          image: yee2542/fluentsearch-admission:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+              name: http
+          envFrom:
+            - configMapRef:
+                name: fluentsearch-admission-config
