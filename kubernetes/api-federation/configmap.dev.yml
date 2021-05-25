@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fluentsearch-api-federation-config
+  namespace: fluentsearch-storage
+data:
+  NODE_ENV: "production"
+  TZ: Asia/Bangkok
+  ORIGIN: "http(|s)://storage.fluentsearch.ml|localhost|fluentsearch.ml"
