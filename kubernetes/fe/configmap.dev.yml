@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fluentsearch-fe-config
+  namespace: fluentsearch-fe
+data:
+  NODE_ENV: "production"
+  TZ: Asia/Bangkok
+  APP_BACKEND_STORAGE_ENDPOINT: "http://storage.fluentsearch.ml"
+  APP_GRAPHQL_ENDPOINT: "http://federation.fluentsearch.ml/graphql"
