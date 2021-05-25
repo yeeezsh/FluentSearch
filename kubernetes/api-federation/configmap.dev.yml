@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: fluentsearch-api-federation-config
-  namespace: fluentsearch-storage
+  namespace: fluentsearch-api-federation
 data:
   NODE_ENV: "production"
   TZ: Asia/Bangkok
