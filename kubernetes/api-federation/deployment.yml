@@ -22,7 +22,7 @@ spec:
           image: yee2542/fluentsearch-api-federation:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 3000
+            - containerPort: 4000
               name: http
           envFrom:
             - configMapRef:

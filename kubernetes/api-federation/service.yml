@@ -9,4 +9,4 @@ spec:
   selector:
     app: fluentsearch-api-federation
   ports:
-    - port: 3000
+    - port: 4000
