@@ -21,6 +21,14 @@
 - fluentsearch-bff-ingress `(host: api.fluentsearch.ml)`
 - fluentsearch-fe-ingress `(host: fluentsearch.ml)`
 - fluentsearch-storage-ingress `(host: storage.fluentsearch.ml)`
+- fluentsearch-api-federation-ingress `(host: federation.fluentsearch.ml)`
+
+# API Federation
+
+```sh
+$ kubectl create namespace fluentsearch-api-federation
+$ kubectl create -f ./api-federation
+```
 
 # Admission
 

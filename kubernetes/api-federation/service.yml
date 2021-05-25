@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fluentsearch-api-federation-service
+  namespace: fluentsearch-api-federation
+  annotations:
+    linkerd.io/inject: enabled
+spec:
+  selector:
+    app: fluentsearch-api-federation
+  ports:
+    - port: 4000

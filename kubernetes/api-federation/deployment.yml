@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fluentsearch-api-federation
+  namespace: fluentsearch-api-federation
+  labels:
+    app: fluentsearch-api-federation
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fluentsearch-api-federation
+  template:
+    metadata:
+      annotations:
+        linkerd.io/inject: enabled
+      labels:
+        app: fluentsearch-api-federation
+    spec:
+      containers:
+        - name: fluentsearch-api-federation
+          image: yee2542/fluentsearch-api-federation:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 4000
+              name: http
+          envFrom:
+            - configMapRef:
+                name: fluentsearch-api-federation-config
