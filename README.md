@@ -1,8 +1,10 @@
 # FluentSearch
 
 ## repository
+
 - Frontend [FluentSearch-FE](https://github.com/yee2542/FluentSearch-FE)
 - Backend for Frontend [FluentSearch-BFF](https://github.com/yee2542/FluentSearch-BFF)
+- Storage [FluentSearch-Admission](https://github.com/yee2542/FluentSearch-Admission)
 - Storage [FluentSearch-Storage](https://github.com/yee2542/FluentSearch-Storage)
 - Insight [FluentSearch-Insight](https://github.com/yee2542/FluentSearch-Insight)
 - Insight Video [FluentSearch-Insight-Video](https://github.com/yee2542/FluentSearch-Insight-Video)
@@ -11,12 +13,14 @@
 - Mini [FluentSearch-Mini](https://github.com/yee2542/FluentSearch-Mini)
 
 ## Server Setup
+
 - setup kebernetes on ubuntu [README.md](anisible/kube-setup/)
 - setup fluentsearch on kubernetes [README.md](kubernetes/)
 
 ## Local Development
 
 ### Prerequisite
+
 - Minikube v1.16.0
 - Kubernetes v1.20.0
 - Docker (macOS) v20.10.0
