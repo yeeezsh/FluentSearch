@@ -8,4 +8,4 @@ data:
   TZ: Asia/Bangkok
   ORIGIN: "http(|s)://federation.fluentsearch.ml|localhost|fluentsearch.ml"
   BFF_ENDPOINT: http://fluentsearch-bff-service.fluentsearch-bff.svc.cluster.local:5000/graphql
-  ADMISSION_ENDPOINT: http://fluentsearch-api-federation-service.fluentsearch-admission.svc.cluster.local:3000/graphql
+  ADMISSION_ENDPOINT: http://fluentsearch-admission-service.fluentsearch-admission.svc.cluster.local:3000/graphql
