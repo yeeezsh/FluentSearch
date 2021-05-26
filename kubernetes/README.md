@@ -35,7 +35,7 @@ $ kubectl create -f ./api-federation
 # ML
 
 ```sh
-$ kubectl create namespace fluentsearch-fl
+$ kubectl create namespace fluentsearch-ml
 $ kubectl create -f ./ml
 ```
 
