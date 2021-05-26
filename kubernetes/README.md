@@ -4,6 +4,7 @@
 - fluentsearch-bff `(port: 3000)`
 - fluentsearch-storage `(port: 3000)`
 - fluentsearch-admission `(port: 3000)`
+- fluentsearch-ml `(port: 8080)`
 
 # Services
 
@@ -14,6 +15,7 @@
 - kubernetes-dashboard `(port: 443)`
 - fluentsearch-mongodb-mongodb-sharded `(port: 27017)`
 - rabbitmq `(port:5672,15672)`
+- fluentsearch-ml-service (port:8080)
 
 # Ingress
 
@@ -28,6 +30,13 @@
 ```sh
 $ kubectl create namespace fluentsearch-api-federation
 $ kubectl create -f ./api-federation
+```
+
+# ML
+
+```sh
+$ kubectl create namespace fluentsearch-fl
+$ kubectl create -f ./ml
 ```
 
 # Admission
