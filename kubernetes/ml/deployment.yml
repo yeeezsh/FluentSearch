@@ -6,12 +6,6 @@ metadata:
   labels:
     app: fluentsearch-ml
 spec:
-  resources:
-    requests:
-      memory: "1024Mi"
-      cpu: "500m"
-  nodeSelector:
-    doks.digitalocean.com/node-pool: ml-pool
   replicas: 4
   selector:
     matchLabels:
@@ -23,10 +17,16 @@ spec:
       labels:
         app: fluentsearch-ml
     spec:
+      nodeSelector:
+        doks.digitalocean.com/node-pool: ml-pool
       containers:
-        - name: fluentsearch-api-federation
+        - name: fluentsearch-ml
           image: jolibrain/deepdetect_cpu
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
               name: http
+          resources:
+            requests:
+              memory: "1024Mi"
+              cpu: "250m"
