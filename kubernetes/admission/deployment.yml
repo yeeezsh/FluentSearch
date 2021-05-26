@@ -17,6 +17,8 @@ spec:
       labels:
         app: fluentsearch-admission
     spec:
+      nodeSelector:
+        doks.digitalocean.com/node-pool: general-pool
       containers:
         - name: fluentsearch-admission
           image: yee2542/fluentsearch-admission:latest

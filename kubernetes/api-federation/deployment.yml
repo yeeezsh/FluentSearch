@@ -17,6 +17,8 @@ spec:
       labels:
         app: fluentsearch-api-federation
     spec:
+      nodeSelector:
+        doks.digitalocean.com/node-pool: general-pool
       containers:
         - name: fluentsearch-api-federation
           image: yee2542/fluentsearch-api-federation:latest

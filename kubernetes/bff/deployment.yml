@@ -17,6 +17,8 @@ spec:
       labels:
         app: fluentsearch-bff
     spec:
+      nodeSelector:
+        doks.digitalocean.com/node-pool: general-pool
       containers:
         - name: fluentsearch-bff
           image: yee2542/fluentsearch-bff:latest
