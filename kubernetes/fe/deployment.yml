@@ -17,6 +17,8 @@ spec:
       labels:
         app: fluentsearch-fe
     spec:
+      nodeSelector:
+        doks.digitalocean.com/node-pool: general-pool
       containers:
         - name: fluentsearch-fe
           image: yee2542/fluentsearch-fe:latest

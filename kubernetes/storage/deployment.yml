@@ -17,6 +17,8 @@ spec:
       labels:
         app: fluentsearch-storage
     spec:
+      nodeSelector:
+        doks.digitalocean.com/node-pool: general-pool
       containers:
         - name: fluentsearch-storage
           image: yee2542/fluentsearch-storage:latest
