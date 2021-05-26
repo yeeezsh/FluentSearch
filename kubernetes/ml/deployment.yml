@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fluentsearch-ml
+  namespace: fluentsearch-ml
+  labels:
+    app: fluentsearch-ml
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: fluentsearch-ml
+  template:
+    metadata:
+      annotations:
+        linkerd.io/inject: enabled
+      labels:
+        app: fluentsearch-ml
+    spec:
+      nodeSelector:
+        doks.digitalocean.com/node-pool: ml-pool
+      containers:
+        - name: fluentsearch-ml
+          image: jolibrain/deepdetect_cpu
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              name: http
+          resources:
+            requests:
+              memory: "512Mi"
