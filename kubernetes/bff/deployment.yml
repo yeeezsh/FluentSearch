@@ -18,6 +18,7 @@ spec:
         app: fluentsearch-bff
     spec:
       nodeSelector:
+        doks.digitalocean.com/node-pool: minio-pool
         doks.digitalocean.com/node-pool: general-pool
       containers:
         - name: fluentsearch-bff

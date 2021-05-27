@@ -19,6 +19,7 @@ spec:
     spec:
       nodeSelector:
         doks.digitalocean.com/node-pool: general-pool
+        doks.digitalocean.com/node-pool: minio-pool
       containers:
         - name: fluentsearch-fe
           image: yee2542/fluentsearch-fe:latest
