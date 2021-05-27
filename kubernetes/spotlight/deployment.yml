@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fluentsearch-spotlight
+  namespace: fluentsearch-spotlight
+  labels:
+    app: fluentsearch-spotlight
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fluentsearch-spotlight
+  template:
+    metadata:
+      annotations:
+        linkerd.io/inject: enabled
+      labels:
+        app: fluentsearch-spotlight
+    spec:
+      nodeSelector:
+        doks.digitalocean.com/node-pool: general-pool
+      containers:
+        - name: fluentsearch-spotlight
+          image: yee2542/fluentsearch-spotlight:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+              name: http
+          envFrom:
+            - configMapRef:
+                name: fluentsearch-spotlight-config

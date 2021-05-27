@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fluentsearch-spotlight-config
+  namespace: fluentsearch-spotlight
+data:
+  NODE_ENV: "production"
+  TZ: Asia/Bangkok
+  ORIGIN: "http(|s)://storage.fluentsearch.ml|localhost|fluentsearch.ml"
+  DATABASE_CONNECTION: "mongodb://fluentsearch-mongodb-mongodb-sharded.fluentsearch-mongo-db.svc.cluster.local/fluentsearch"
+  DATABASE_USERNAME: root
+  DATABASE_PASSWORD: Fluent$earch@MongoDB
+  DATABASE_AUTH_SOURCE: admin
+  JWT_SECRET_KEY: jwt1secret
+  JWT_EXPIRES: "300000"
+  SESSION_SECRET: session1secret
+  SESSION_EXPIRES: "86400000"
+  PORT: "3000"
+  STORAGE_ENDPOINT: http://fluentsearch-storage-service.fluentsearch-storage.svc.cluster.local:3000
+  # STORAGE_HOSTNAME: "storage.fluentsearch.ml"
