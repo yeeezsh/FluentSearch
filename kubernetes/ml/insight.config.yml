@@ -16,4 +16,4 @@ data:
   RABBITMQ_PASSWORD: "FluentSearchRabbitMQ"
   ML_ENDPOINT: http://localhost:8080
   PORT: "3000"
-  STORAGE_HOSTNAME: "fluentsearch-storage-service.fluentsearch-storage.svc.cluster.local:3000"
+  STORAGE_HOSTNAME: "http://fluentsearch-storage-service.fluentsearch-storage.svc.cluster.local:3000"
