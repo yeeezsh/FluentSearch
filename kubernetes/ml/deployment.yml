@@ -37,6 +37,6 @@ spec:
               name: http
             - containerPort: 80
               name: access-storage
-          # resources:
-          #   requests:
-          #     memory: "512Mi"
+          resources:
+            requests:
+              memory: "1536Mi"
