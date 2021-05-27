@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fluentsearch-insight-config
+  namespace: fluentsearch-ml
+data:
+  NODE_ENV: "production"
+  TZ: Asia/Bangkok
+  ORIGIN: "http(|s)://localhost|fluentsearch.ml"
+  DATABASE_CONNECTION: "mongodb://fluentsearch-mongodb-mongodb-sharded.fluentsearch-mongo-db.svc.cluster.local/fluentsearch"
+  DATABASE_USERNAME: root
+  DATABASE_PASSWORD: Fluent$earch@MongoDB
+  DATABASE_AUTH_SOURCE: admin
+  RABBITMQ_ENDPOINT: "rabbitmq.fluentsearch-mq.svc.cluster.local"
+  RABBITMQ_USERNAME: "root"
+  RABBITMQ_PASSWORD: "FluentSearchRabbitMQ"
+  ML_ENDPOINT: http://localhost:8080
+  PORT: "3000"
+  STORAGE_HOSTNAME: "http://fluentsearch-storage-service.fluentsearch-storage.svc.cluster.local:3000"
