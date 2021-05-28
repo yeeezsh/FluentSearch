@@ -4,10 +4,11 @@
 
 - Frontend [FluentSearch-FE](https://github.com/yee2542/FluentSearch-FE)
 - Backend for Frontend [FluentSearch-BFF](https://github.com/yee2542/FluentSearch-BFF)
-- Storage [FluentSearch-Admission](https://github.com/yee2542/FluentSearch-Admission)
+- Admission [FluentSearch-Admission](https://github.com/yee2542/FluentSearch-Admission)
 - Storage [FluentSearch-Storage](https://github.com/yee2542/FluentSearch-Storage)
 - Insight [FluentSearch-Insight](https://github.com/yee2542/FluentSearch-Insight)
 - Insight Video [FluentSearch-Insight-Video](https://github.com/yee2542/FluentSearch-Insight-Video)
+- Spotlight [FluentSearch-Spotlight](https://github.com/yee2542/FluentSearch-Spotlight)
 - Types [FluentSearch-Types](https://github.com/yee2542/FluentSearch-Types)
 
 - Mini [FluentSearch-Mini](https://github.com/yee2542/FluentSearch-Mini)
