@@ -1,0 +1,5 @@
+sh.shardCollection("fluentsearch.files", {owner: 1, _id: 1})
+sh.shardCollection("fluentsearch.insights", {keyword: 1, _id: 1, owner: 1, fileId: 1,fileType: 1})
+sh.shardCollection("fluentsearch.tasks", {_id: 1, state: 1, owner: 1, priority: 1})
+sh.shardCollection("fluentsearch.tasks", {_id: 1, state: 1, owner: 1, priority: 1})
+sh.shardCollection("fluentsearch.quotas", {_id: 1,owner: 1})
