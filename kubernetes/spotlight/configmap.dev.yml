@@ -16,5 +16,5 @@ data:
   SESSION_SECRET: session1secret
   SESSION_EXPIRES: "86400000"
   PORT: "3000"
-  STORAGE_ENDPOINT: http://fluentsearch-storage-service.fluentsearch-storage.svc.cluster.local:3000
+  STORAGE_ENDPOINT: http://storage.fluentsearch.ml/
   # STORAGE_HOSTNAME: "storage.fluentsearch.ml"
