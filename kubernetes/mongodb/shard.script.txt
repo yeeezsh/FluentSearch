@@ -1,3 +1,4 @@
+sh.enableSharding("fluentsearch")
 sh.shardCollection("fluentsearch.files", {owner: 1, zone: 1, type: 1, refs: 1, createAt: 1, updateAt: 1})
 sh.shardCollection("fluentsearch.insights", {keyword: 1, owner: 1, model: 1, fileId: 1,fileType: 1, fps: 1, createAt: 1, updateAt: 1})
 sh.shardCollection("fluentsearch.tasks", {state: 1, owner: 1, priority: 1, type: 1, group: 1, fileId: 1})
