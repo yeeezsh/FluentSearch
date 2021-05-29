@@ -6,7 +6,7 @@ metadata:
   labels:
     app: fluentsearch-ml
 spec:
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       app: fluentsearch-ml
