@@ -1,35 +1,35 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fluentsearch-ml
+  name: fluentsearch-ml-video
   namespace: fluentsearch-ml
   labels:
-    app: fluentsearch-ml
+    app: fluentsearch-ml-video
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: fluentsearch-ml
+      app: fluentsearch-ml-video
   template:
     metadata:
       annotations:
         linkerd.io/inject: enabled
       labels:
-        app: fluentsearch-ml
+        app: fluentsearch-ml-video
     spec:
       nodeSelector:
         doks.digitalocean.com/node-pool: ml-pool
       containers:
         - name: fluentsearch-insight
-          image: yee2542/fluentsearch-insight
+          image: yee2542/fluentsearch-insight-video
           imagePullPolicy: Always
           ports:
-            - containerPort: 3000
+            - containerPort: 3001
               name: http
           envFrom:
             - configMapRef:
-                name: fluentsearch-insight-config
-        - name: fluentsearch-ml
+                name: fluentsearch-insight-video-config
+        - name: fluentsearch-ml-video
           image: jolibrain/deepdetect_cpu
           imagePullPolicy: Always
           ports:
