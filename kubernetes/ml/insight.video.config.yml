@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fluentsearch-insight-video-config
+  namespace: fluentsearch-ml
+data:
+  NODE_ENV: "production"
+  TZ: Asia/Bangkok
+  ORIGIN: "http(|s)://localhost|fluentsearch.ml"
+  DATABASE_CONNECTION: "mongodb://fluentsearch-mongodb-mongodb-sharded.fluentsearch-mongo-db.svc.cluster.local/fluentsearch"
+  DATABASE_USERNAME: root
+  DATABASE_PASSWORD: Fluent$earch@MongoDB
+  DATABASE_AUTH_SOURCE: admin
+  RABBITMQ_ENDPOINT: "rabbitmq.fluentsearch-mq.svc.cluster.local"
+  RABBITMQ_USERNAME: "root"
+  RABBITMQ_PASSWORD: "FluentSearchRabbitMQ"
+  ML_ENDPOINT: http://localhost:8080
+  PORT: "3001"
+  STORAGE_HOSTNAME: "http://fluentsearch-storage-service.fluentsearch-storage.svc.cluster.local:3000"
+  TMP_VIDEO_SERVER: http://localhost:3001
+  MINIO_ACCESS_KEY: "root"
+  MINIO_SECRET_KEY: "Fluent$earch@Minio"
+  MINIO_SERVER_ENDPOINT: "minio.minio-tenant-1.svc.cluster.local"
+  MINIO_SERVER_PORT: "443"
+  MINIO_SERVER_SSL: "true"
