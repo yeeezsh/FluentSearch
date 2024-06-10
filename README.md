@@ -10,6 +10,7 @@
 - Insight Video [FluentSearch-Insight-Video](https://github.com/yee2542/FluentSearch-Insight-Video)
 - Spotlight [FluentSearch-Spotlight](https://github.com/yee2542/FluentSearch-Spotlight)
 - Types [FluentSearch-Types](https://github.com/yee2542/FluentSearch-Types)
+- API Federation [FluentSearch-API-Federation](https://github.com/yeeezsh/FluentSearch-API-Federation)
 
 - Mini [FluentSearch-Mini](https://github.com/yee2542/FluentSearch-Mini)
 
